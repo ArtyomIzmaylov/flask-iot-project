@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Interface</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="../static/js/ajaxweb.js"></script>
+    <style>
+        /* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#monitoring_data {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#monitoring_data h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#monitoring_data input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#monitoring_data button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#monitoring_data button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div id="monitoring_data">
+        <h2>Температура</h2>
+        <script>document.write("Температура: ");</script>
+        <input type="text" id="TempIn" placeholder="Команда">
+        <button onclick="send_data()">Отправить</button>
+    </div>
+    <div id="monitoring_data">
+        <h2>Давление</h2>
+        <script>document.write("Давление: ");</script>
+        <input type="text" id="DavlIn" placeholder="Команда">
+        <button onclick="send_data_x2()">Отправить</button>
+    </div>
+    <div id="monitoring_data">
+        <h2>Кислород</h2>
+        <script>document.write("Кислород: ");</script>
+        <input type="text" id="KislorIn" placeholder="Команда">
+        <button onclick="send_data_x3()">Отправить</button>
+    </div>
+    <div id="monitoring_data">
+        <h2>Сон</h2>
+        <script>document.write("Сон: ");</script>
+        <input type="text" id="hours" placeholder="Команда">
+        <button onclick="send_data_x4()">Отправить</button>
+    </div>
+    <div id="monitoring_data">
+        <h2>Пульс</h2>
+        <script>document.write("Пульс: ");</script>
+        <input type="text" id="pulsIn" placeholder="Enter value">
+        <button onclick="send_data_x5()">Отправить</button>
+    </div>
+    <div id="monitoring_data">
+        <h2>Отправить все команды</h2>
+            <input type="text" placeholder="Отправить все команды">
+        <button onclick="send_control_commands()">Отправить</button>
+    </div>
+</body>
+</html>
